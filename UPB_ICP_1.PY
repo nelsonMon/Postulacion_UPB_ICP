@@ -10,6 +10,7 @@ from win32api import GetSystemMetrics ### PAQUETE PARA OBTENER EL
 
 
 def COLOCAR_TRIANGULO():
+    
     label.append(tkinter.Label(window,bg="red",width=10,height=5))
     coordenatex=int(random.gauss(450, 150))
     coordenatey=int(random.gauss(800, 15))
@@ -19,6 +20,7 @@ def COLOCAR_TRIANGULO():
         label[i].bind("<B1-Motion>",drag_motion)
 
 def COLOCAR_CUADRADO():
+    
     label.append(tkinter.Label(window,bg="blue",width=10,height=5))
     coordenatex=int(random.gauss(450, 150))
     coordenatey=int(random.gauss(800, 15))
@@ -27,7 +29,9 @@ def COLOCAR_CUADRADO():
         label[i].bind("<Button-1>",drag_start)
         label[i].bind("<B1-Motion>",drag_motion)
         
+
 def COLOCAR_CIRCULO():
+    
     label.append(tkinter.Label(window,bg="green",width=10,height=5))
     coordenatex=int(random.gauss(450, 150))
     coordenatey=int(random.gauss(800, 15))
@@ -35,9 +39,11 @@ def COLOCAR_CIRCULO():
     for i in range(0,len(label)):
         label[i].bind("<Button-1>",drag_start)
         label[i].bind("<B1-Motion>",drag_motion)        
+        
  
 def CALCULAR():
     print('mmmm')
+    
        
 def drag_start(event):
     widget = event.widget
