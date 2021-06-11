@@ -17,8 +17,10 @@ window =tkinter.Tk()
 window.geometry('900x900')
 
 def COLOCAR_TRIANGULO():
-    global cajas_datos
-    
+    ### funcion para colocar un triangulo(cuadrado rojo) con las respectivas entradas y salidas
+    ### como se observa en el documento de word    
+    global cajas_datos ### se declara la variabla de cajas_datos como variable global. Esto con el fin de que sea de utilidad para mover 
+    ### las cajas de datos  tanto de entrada como de saliad.
     # global coordenatex_caja_datos_I1
     # global coordenatey_caja_datos_I1
     
@@ -32,6 +34,8 @@ def COLOCAR_TRIANGULO():
     coordenatex=int(random.gauss(450, 150))
     coordenatey=int(random.gauss(800, 15))
     Labels[-1].place(x=coordenatex, y=coordenatey)
+    ### con las lineas de codigo de arriba creo y posiciono un cuadrado rojo que representaria 
+    
     
     cajas_datos.append(tkinter.Entry(window,width=10))
     coordenatex_caja_datos_I1=coordenatex+100
